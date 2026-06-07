@@ -39,12 +39,12 @@ Project-Page-Template/
 | 順序 | Section ID | 標題 | 背景色 | 說明 |
 |------|-----------|------|--------|------|
 | 1 | hero | 標題 + 作者 + 連結按鈕 | 白 | 保留原始模板 |
-| 2 | problem-motivation | Problem + Motivation | 白 | 雙欄 `columns`，左 Problem 右 Motivation |
-| 3 | define-fun | How We Define Fun? | 淺灰 `is-light` | 三張卡片：Skill-Discriminative, Diverse, Interaction |
-| 4 | methodology | Methodology — SFT + Multi-Reward GRPO | 白 | method figure + 兩步驟 + 4 reward cards |
-| 5 | results | Results | 淺灰 `is-light` | 主比較表格（7 metrics × 3 baselines）+ visualization |
-| 6 | ablation-study | Ablation Study | 白 | 消融表格（6 configs × 4 metrics） |
-| 7 | limitation-future | Limitation / Future Work | 淺灰 `is-light` | 雙欄卡片：Limitations + Future Work |
+| 2 | abstract | Abstract | 淺灰 `is-light` | 論文摘要 |
+| 3 | problem-motivation | Problem + Motivation | 白 | 雙欄 `columns`，左 Problem 右 Motivation |
+| 4 | methodology | Methodology | 淺灰 `is-light` | 子段落：How We Define Fun?（三卡片）+ SFT + Multi-Reward GRPO（method figure + 步驟 + reward cards） |
+| 5 | results | Results | 白 | 主比較表格（7 metrics × 3 baselines）+ visualization |
+| 6 | ablation-study | Ablation Study | 淺灰 `is-light` → 白 | 消融表格（6 configs × 4 metrics） |
+| 7 | conclusion | Conclusion | 淺灰 `is-light` | 結論總結 + 雙欄卡片（Limitations + Future Work） |
 | 8 | BibTeX | BibTeX | 白 | 引用資訊 + 複製按鈕 |
 
 ## 設計假設與技術債

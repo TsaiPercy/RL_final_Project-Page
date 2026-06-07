@@ -1042,6 +1042,23 @@ a:focus {
   margin-bottom: 0.5rem;
 }
 
+/* Conclusion Summary */
+.conclusion-summary {
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-left: 4px solid var(--primary-color);
+  border-radius: var(--border-radius);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.conclusion-summary p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--text-primary);
+  margin: 0;
+}
+
 /* Responsive adjustments for new sections */
 @media screen and (max-width: 768px) {
   .fun-dimensions {

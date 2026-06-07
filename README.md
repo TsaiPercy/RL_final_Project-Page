@@ -40,12 +40,12 @@ To edit the websites contents edit the `index.html` file. It contains different 
 
 ## Page Sections
 
+- Abstract
 - Problem + Motivation (two-column layout)
-- How We Define Fun? (three dimension cards)
-- Methodology — SFT + Multi-Reward GRPO (method steps + reward cards)
+- Methodology (How We Define Fun? + SFT + Multi-Reward GRPO)
 - Results (comparison table + visualization placeholders)
 - Ablation Study (ablation table)
-- Limitation / Future Work (two-column cards)
+- Conclusion (summary + Limitations + Future Work cards)
 - BibTeX citation
 
 ## Customization

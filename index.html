@@ -80,7 +80,7 @@
 
 
   <!-- TODO: Replace with your paper title and authors -->
-  <title>PAPER_TITLE - AUTHOR_NAMES | Academic Research</title>
+  <title>RL FINAL PROJECT 2026 Spring</title>
   
   <!-- Favicon and App Icons -->
   <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
@@ -268,31 +268,23 @@
 
                   <div class="column has-text-centered">
                     <div class="publication-links">
-                         <!-- TODO: Update with your arXiv paper ID -->
+                      
+                      
+                      <!-- TODO: Poster Link -->
                       <span class="link-block">
-                        <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                        <a href="https://www.overleaf.com/project/6a2594b9bc37ec8baee4fb3a" target="_blank"
                         class="external-link button is-normal is-rounded is-dark">
                         <span class="icon">
                           <i class="fas fa-file-pdf"></i>
                         </span>
-                        <span>Paper</span>
+                        <span>Poster</span>
                       </a>
                     </span>
 
-                    <!-- TODO: Add your supplementary material PDF or remove this section -->
-                    <span class="link-block">
-                      <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                      class="external-link button is-normal is-rounded is-dark">
-                      <span class="icon">
-                        <i class="fas fa-file-pdf"></i>
-                      </span>
-                      <span>Supplementary</span>
-                    </a>
-                  </span>
 
-                  <!-- TODO: Replace with your GitHub repository URL -->
+                  <!-- TODO: GitHub repository URL -->
                   <span class="link-block">
-                    <a href="https://github.com/YOUR REPO HERE" target="_blank"
+                    <a href="https://github.com/Yu-Hsuan-1220/RL_Final_Project" target="_blank"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="fab fa-github"></i>
@@ -301,16 +293,6 @@
                   </a>
                 </span>
 
-                <!-- TODO: Update with your arXiv paper ID -->
-                <span class="link-block">
-                  <a href="https://arxiv.org/abs/<ARXIV PAPER ID>" target="_blank"
-                  class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                    <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
             </div>
           </div>
         </div>
@@ -318,6 +300,25 @@
     </div>
   </div>
 </section>
+
+
+<!-- Abstract -->
+<section class="section hero is-light" id="abstract">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            <!-- TODO: 請填入論文摘要 -->
+            Placeholder abstract text — 請替換為實際論文摘要內容。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Abstract -->
 
 
 <!-- Problem + Motivation Section -->
@@ -345,14 +346,12 @@
           <h2 class="title is-3 section-title-left">Motivation — LLMs: Good but Not Enough</h2>
           <div class="content">
             <div class="motivation-point motivation-good">
-              <span class="motivation-icon">😊</span>
               <p>LLMs have <strong>rich game design knowledge prior</strong>.</p>
             </div>
             <div class="placeholder-figure" id="motivation-survey-figure">
               <p class="has-text-centered has-text-grey">[ LLM Survey Paper 截圖 — Large Language Models and Games ]</p>
             </div>
             <div class="motivation-point motivation-bad">
-              <span class="motivation-icon">😢</span>
               <p>LLMs don't know how to generate <strong>legal, fun</strong> levels.</p>
             </div>
           </div>
@@ -363,45 +362,37 @@
 </section>
 <!-- End Problem + Motivation -->
 
-<!-- How we define fun? -->
-<section class="section hero is-light" id="define-fun">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">How We Define Fun?</h2>
-        <div class="content has-text-justified">
-          <p>We propose three key dimensions to evaluate whether a generated game level is <strong>"fun"</strong>:</p>
-          <div class="fun-dimensions">
-            <div class="fun-dimension-card">
-              <div class="fun-dimension-icon">🎯</div>
-              <h4>Skill-Discriminative</h4>
-              <p>A fun level should differentiate players of different skill levels — better players should achieve better outcomes.</p>
-            </div>
-            <div class="fun-dimension-card">
-              <div class="fun-dimension-icon">🌀</div>
-              <h4>Diverse</h4>
-              <p>Generated levels should exhibit variety in structure and solution paths, avoiding repetitive patterns.</p>
-            </div>
-            <div class="fun-dimension-card">
-              <div class="fun-dimension-icon">🤝</div>
-              <h4>Interaction</h4>
-              <p>Levels should encourage meaningful object interactions, creating engaging gameplay experiences.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End How we define fun? -->
-
-
 <!-- Methodology Section -->
-<section class="hero is-small" id="methodology">
+<section class="hero is-small is-light" id="methodology">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Methodology — SFT + Multi-Reward GRPO</h2>
+      <h2 class="title is-3 has-text-centered">Methodology</h2>
       <div class="content has-text-justified">
+
+        <!-- How We Define Fun? sub-section -->
+        <h3 class="title is-4 has-text-centered">How We Define Fun?</h3>
+        <p class="has-text-centered">We propose three key dimensions to evaluate whether a generated game level is <strong>"fun"</strong>:</p>
+        <div class="fun-dimensions">
+          <div class="fun-dimension-card">
+            <div class="fun-dimension-icon">🎯</div>
+            <h4>Skill-Discriminative</h4>
+            <p>A fun level should differentiate players of different skill levels — better players should achieve better outcomes.</p>
+          </div>
+          <div class="fun-dimension-card">
+            <div class="fun-dimension-icon">🌀</div>
+            <h4>Diverse</h4>
+            <p>Generated levels should exhibit variety in structure and solution paths, avoiding repetitive patterns.</p>
+          </div>
+          <div class="fun-dimension-card">
+            <div class="fun-dimension-icon">🤝</div>
+            <h4>Interaction</h4>
+            <p>Levels should encourage meaningful object interactions, creating engaging gameplay experiences.</p>
+          </div>
+        </div>
+
+        <!-- SFT + Multi-Reward GRPO -->
+        <h3 class="title is-4 has-text-centered" style="margin-top: 3rem;">SFT + Multi-Reward GRPO</h3>
+
         <!-- Method Overview Figure -->
         <div class="placeholder-figure method-figure" id="method-overview-figure">
           <p class="has-text-centered has-text-grey">[ Method Overview Figure — 請放置方法架構圖 ]</p>
@@ -616,13 +607,18 @@
 
 
 
-<!-- Limitation / Future Work Section -->
-<section class="hero is-small is-light" id="limitation-future">
+<!-- Conclusion Section -->
+<section class="hero is-small is-light" id="conclusion">
   <div class="hero-body">
     <div class="container is-max-desktop">
-      <h2 class="title is-3 has-text-centered">Limitation / Future Work</h2>
+      <h2 class="title is-3 has-text-centered">Conclusion</h2>
       <div class="content has-text-justified">
-        <div class="columns">
+        <!-- Conclusion summary -->
+        <div class="conclusion-summary">
+          <p><!-- TODO: 請填入結論總結 -->Placeholder conclusion — 請替換為實際結論摘要。</p>
+        </div>
+
+        <div class="columns" style="margin-top: 2rem;">
           <div class="column is-6">
             <div class="limitation-card">
               <h4><span class="limitation-icon">⚠️</span> Limitations</h4>
@@ -648,7 +644,7 @@
     </div>
   </div>
 </section>
-<!--End Limitation / Future Work -->
+<!--End Conclusion -->
 
 
 
