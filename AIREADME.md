@@ -13,7 +13,9 @@
 
 ```
 Project-Page-Template/
-├── index.html              # 主頁面，所有 section 在此
+├── index.html              # 主頁面（方案 A：網格地圖展示）
+├── index_B.html            # 主頁面變體（方案 B：輪播地圖展示）
+├── index_C.html            # 主頁面變體（方案 C：分頁地圖展示）
 ├── AIREADME.md             # 本文件
 ├── README.md               # 人類開發者說明
 ├── .nojekyll               # GitHub Pages 設定
@@ -40,16 +42,16 @@ Project-Page-Template/
 |------|-----------|------|--------|------|
 | 1 | hero | 標題 + 作者 + 連結按鈕 | 白 | 保留原始模板 |
 | 2 | abstract | Abstract | 淺灰 `is-light` | 論文摘要 |
-| 3 | problem-motivation | Problem + Motivation | 白 | 雙欄 `columns`，左 Problem 右 Motivation |
+| 3 | problem-motivation | Problem + Motivation | 白 | 雙欄 `columns`（採 `is-max-widescreen` 寬版容器，左 Problem 右 Motivation） |
 | 4 | methodology | Methodology | 淺灰 `is-light` | 子段落：How We Define Fun?（三卡片）+ SFT + Multi-Reward GRPO（method figure + 步驟 + reward cards） |
-| 5 | results | Results | 白 | 主比較表格（7 metrics × 3 baselines）+ visualization |
+| 5 | results | Results | 白 | 主比較表格（7 metrics × 3 baselines）+ visualization + generated level samples comparison 畫廊 |
 | 6 | ablation-study | Ablation Study | 淺灰 `is-light` → 白 | 消融表格（6 configs × 4 metrics） |
 | 7 | conclusion | Conclusion | 淺灰 `is-light` | 結論總結 + 雙欄卡片（Limitations + Future Work） |
 | 8 | reference | References | 白 | 參考文獻列表 |
 
 ## 設計假設與技術債
 
-- **Placeholder 圖片**: 所有 `.placeholder-figure` 區塊目前為虛線框 + 提示文字，需替換為實際圖片
+- **Placeholder 圖片**: 大多數 `.placeholder-figure` 區塊已替換為實際圖片（包括 problem、motivation 及 results 視覺化圖表），僅剩 methodology 中個別預留位置。
 - **表格數據**: Result 和 Ablation Study 表格中的 `—` 需替換為實際實驗數據
 - **Limitation 內容**: 限制和未來方向的條目需替換為實際內容
 - **Meta 資訊**: `<head>` 中的 TODO 項目（OG tags、Twitter cards 等）仍使用模板預設值

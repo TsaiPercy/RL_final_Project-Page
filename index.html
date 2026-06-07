@@ -131,7 +131,7 @@
 
 <!-- Problem + Motivation Section -->
 <section class="hero" id="problem-motivation">
-  <div class="container is-max-desktop">
+  <div class="container is-max-widescreen">
     <div class="hero-body">
       <div class="columns is-multiline">
         <!-- Problem Column -->
@@ -324,15 +324,61 @@
         <h3 class="title is-4" style="margin-top: 2.5rem;">Visualization</h3>
         <div class="columns is-multiline">
           <div class="column is-6">
-            <!-- ⚠️ TODO: 放置結果圖表 1 -->
-            <div class="placeholder-figure" id="result-viz-1">
-              <p class="has-text-centered has-text-grey">[ ⚠️ TODO: Visualization 1 ]</p>
+            <!-- 放置結果圖表 1: Regret Level Graph -->
+            <div class="placeholder-figure plain-figure" id="result-viz-1" style="text-align: center;">
+              <img src="static/images/result_regret_level_graph.png" alt="Regret Level Graph" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
             </div>
           </div>
           <div class="column is-6">
-            <!-- ⚠️ TODO: 放置結果圖表 2 -->
-            <div class="placeholder-figure" id="result-viz-2">
-              <p class="has-text-centered has-text-grey">[ ⚠️ TODO: Visualization 2 ]</p>
+            <!-- 放置結果圖表 2: Matrices Level Graph -->
+            <div class="placeholder-figure plain-figure" id="result-viz-2" style="text-align: center;">
+              <img src="static/images/result_matrices_level_graph.png" alt="Matrices Level Graph" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+          </div>
+        </div>
+
+        <!-- Generated Level Samples Comparison -->
+        <h3 class="title is-4" style="margin-top: 3rem; text-align: center;">Generated Level Samples Comparison</h3>
+        <div class="columns is-centered">
+          <!-- Vanilla LLM Column -->
+          <div class="column is-4 has-text-centered">
+            <h4 class="title is-5" style="margin-bottom: 1rem; color: var(--text-secondary);">Vanilla LLM</h4>
+            <div class="placeholder-figure plain-figure" style="margin: 0.5rem 0;">
+              <img src="static/images/maps/vanilla/map1.png" alt="Vanilla Map 1" style="max-width: 70%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+            <div class="placeholder-figure plain-figure" style="margin: 0.5rem 0;">
+              <img src="static/images/maps/vanilla/map2.png" alt="Vanilla Map 2" style="max-width: 70%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+            <div class="placeholder-figure plain-figure" style="margin: 0.5rem 0;">
+              <img src="static/images/maps/vanilla/map3.png" alt="Vanilla Map 3" style="max-width: 70%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+          </div>
+
+          <!-- SFT LLM Column -->
+          <div class="column is-4 has-text-centered">
+            <h4 class="title is-5" style="margin-bottom: 1rem; color: var(--text-secondary);">SFT LLM</h4>
+            <div class="placeholder-figure plain-figure" style="margin: 0.5rem 0;">
+              <img src="static/images/maps/SFT/map1.png" alt="SFT Map 1" style="max-width: 70%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+            <div class="placeholder-figure plain-figure" style="margin: 0.5rem 0;">
+              <img src="static/images/maps/SFT/map2.png" alt="SFT Map 2" style="max-width: 70%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+            <div class="placeholder-figure plain-figure" style="margin: 0.5rem 0;">
+              <img src="static/images/maps/SFT/map3.png" alt="SFT Map 3" style="max-width: 70%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+          </div>
+
+          <!-- GRPO LLM Column -->
+          <div class="column is-4 has-text-centered">
+            <h4 class="title is-5" style="margin-bottom: 1rem; color: var(--primary-color);">GRPO LLM (Ours)</h4>
+            <div class="placeholder-figure plain-figure" style="margin: 0.5rem 0;">
+              <img src="static/images/maps/Final/map1.png" alt="GRPO Map 1" style="max-width: 70%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+            <div class="placeholder-figure plain-figure" style="margin: 0.5rem 0;">
+              <img src="static/images/maps/Final/map2.png" alt="GRPO Map 2" style="max-width: 70%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+            </div>
+            <div class="placeholder-figure plain-figure" style="margin: 0.5rem 0;">
+              <img src="static/images/maps/Final/map3.png" alt="GRPO Map 3" style="max-width: 70%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
             </div>
           </div>
         </div>
