@@ -38,13 +38,14 @@ To edit the websites contents edit the `index.html` file. It contains different 
 - Copy button for BibTeX citations
 - Better accessibility
 
-## Components
+## Page Sections
 
-- Teaser video
-- Image carousel
-- YouTube video embedding
-- Video carousel
-- PDF poster viewer
+- Problem + Motivation (two-column layout)
+- How We Define Fun? (three dimension cards)
+- Methodology — SFT + Multi-Reward GRPO (method steps + reward cards)
+- Results (comparison table + visualization placeholders)
+- Ablation Study (ablation table)
+- Limitation / Future Work (two-column cards)
 - BibTeX citation
 
 ## Customization

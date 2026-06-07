@@ -750,4 +750,325 @@ a:focus {
 }
 
 
+/* ===== Custom Section Styles ===== */
 
+/* Section title left-aligned variant */
+.section-title-left {
+  text-align: left !important;
+}
+
+.section-title-left::after {
+  left: 0 !important;
+  transform: none !important;
+}
+
+/* Placeholder figure (for images to be added later) */
+.placeholder-figure {
+  background: var(--background-accent);
+  border: 2px dashed var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 3rem 2rem;
+  margin: 1.5rem 0;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.placeholder-figure:hover {
+  border-color: var(--primary-color);
+  background: #eef2ff;
+}
+
+.placeholder-figure.method-figure {
+  min-height: 280px;
+}
+
+/* Problem list */
+.problem-list {
+  font-size: 1.05rem;
+  line-height: 2;
+}
+
+.problem-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* Motivation points */
+.motivation-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: var(--border-radius);
+  margin-bottom: 1rem;
+  transition: var(--transition);
+}
+
+.motivation-point:hover {
+  transform: translateX(4px);
+}
+
+.motivation-good {
+  background: linear-gradient(135deg, #f0fdf4, #dcfce7);
+  border-left: 4px solid #22c55e;
+}
+
+.motivation-bad {
+  background: linear-gradient(135deg, #fef2f2, #fee2e2);
+  border-left: 4px solid #ef4444;
+}
+
+.motivation-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.motivation-point p {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+/* Fun Dimension Cards */
+.fun-dimensions {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.fun-dimension-card {
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.fun-dimension-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--primary-color);
+}
+
+.fun-dimension-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.fun-dimension-card h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.fun-dimension-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Method Steps */
+.method-steps {
+  margin: 2rem 0;
+}
+
+.method-step {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: var(--background-secondary);
+  border-radius: var(--border-radius-lg);
+  margin-bottom: 1rem;
+  border: 1px solid var(--border-color);
+  transition: var(--transition);
+}
+
+.method-step:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.method-step-number {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow-md);
+}
+
+.method-step-content h4 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.method-step-content p {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Reward Cards */
+.reward-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.reward-card {
+  background: var(--background-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius);
+  padding: 1.25rem 1.5rem;
+  transition: var(--transition);
+}
+
+.reward-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent-color);
+  transform: translateY(-2px);
+}
+
+.reward-card h5 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.reward-card p {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Result Table */
+.result-table {
+  font-size: 0.95rem;
+  border-radius: var(--border-radius) !important;
+  overflow: hidden;
+}
+
+.result-table thead th {
+  background: var(--text-primary) !important;
+  color: white !important;
+  font-weight: 600;
+  padding: 1rem;
+  text-align: center;
+  border-color: var(--text-primary) !important;
+}
+
+.result-table tbody td {
+  padding: 0.85rem 1rem;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.result-table tbody tr:hover {
+  background: #eef2ff !important;
+}
+
+.table-note {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  font-style: italic;
+  margin-top: 0.75rem;
+}
+
+/* Limitation / Future Work Cards */
+.limitation-card {
+  background: var(--background-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 2rem;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+  height: 100%;
+  border-top: 4px solid #f59e0b;
+}
+
+.limitation-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.limitation-card.future-card {
+  border-top-color: var(--primary-color);
+}
+
+.limitation-card h4 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.limitation-icon {
+  font-size: 1.3rem;
+}
+
+.limitation-card ul {
+  margin-left: 0.5rem;
+}
+
+.limitation-card li {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 0.5rem;
+}
+
+/* Responsive adjustments for new sections */
+@media screen and (max-width: 768px) {
+  .fun-dimensions {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .reward-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .method-step {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .placeholder-figure {
+    min-height: 120px;
+    padding: 2rem 1rem;
+  }
+
+  .placeholder-figure.method-figure {
+    min-height: 180px;
+  }
+
+  .limitation-card {
+    padding: 1.5rem;
+  }
+}

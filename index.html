@@ -314,159 +314,335 @@
 </section>
 
 
-<!-- Teaser video-->
-<section class="hero teaser">
+<!-- Problem + Motivation Section -->
+<section class="hero" id="problem-motivation">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
-      <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
-      </h2>
-    </div>
-  </div>
-</section>
-<!-- End teaser video -->
-
-<!-- Paper abstract -->
-<section class="section hero is-light">
-  <div class="container is-max-desktop">
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <!-- TODO: Replace with your paper abstract -->
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ullamcorper tellus sed ante aliquam tempus. Etiam porttitor urna feugiat nibh elementum, et tempor dolor mattis. Donec accumsan enim augue, a vulputate nisi sodales sit amet. Proin bibendum ex eget mauris cursus euismod nec et nibh. Maecenas ac gravida ante, nec cursus dui. Vivamus purus nibh, placerat ac purus eget, sagittis vestibulum metus. Sed vestibulum bibendum lectus gravida commodo. Pellentesque auctor leo vitae sagittis suscipit.
-          </p>
+      <div class="columns is-multiline">
+        <!-- Problem Column -->
+        <div class="column is-6">
+          <h2 class="title is-3 section-title-left">Problem — Game Level Generation</h2>
+          <div class="content">
+            <ul class="problem-list">
+              <li>Level design is <strong>labor-intensive</strong>.</li>
+              <li>There is no generative method to generate <strong>"fun"</strong> levels.</li>
+              <li>⇒ How to generate fun game?</li>
+            </ul>
+            <!-- placeholder for crossword/game screenshot -->
+            <div class="placeholder-figure" id="problem-figure">
+              <p class="has-text-centered has-text-grey">[ Game Level Screenshot — 請放置遊戲關卡截圖 ]</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- End paper abstract -->
-
-
-<!-- Image carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-       <div class="item">
-        <!-- TODO: Replace with your research result images -->
-        <img src="static/images/carousel1.jpg" alt="First research result visualization" loading="lazy"/>
-        <!-- TODO: Replace with description of this result -->
-        <h2 class="subtitle has-text-centered">
-          First image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel2.jpg" alt="Second research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-          Second image description.
-        </h2>
-      </div>
-      <div class="item">
-        <!-- Your image here -->
-        <img src="static/images/carousel3.jpg" alt="Third research result visualization" loading="lazy"/>
-        <h2 class="subtitle has-text-centered">
-         Third image description.
-       </h2>
-     </div>
-     <div class="item">
-      <!-- Your image here -->
-      <img src="static/images/carousel4.jpg" alt="Fourth research result visualization" loading="lazy"/>
-      <h2 class="subtitle has-text-centered">
-        Fourth image description.
-      </h2>
-    </div>
-  </div>
-</div>
-</div>
-</section>
-<!-- End image carousel -->
-
-
-
-
-<!-- Youtube video -->
-<section class="hero is-small is-light">
-  <div class="hero-body">
-    <div class="container">
-      <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
-      <div class="columns is-centered has-text-centered">
-        <div class="column is-four-fifths">
-          
-          <div class="publication-video">
-            <!-- TODO: Replace with your YouTube video ID -->
-            <iframe src="https://www.youtube.com/embed/JkaxUblCGz0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <!-- Motivation Column -->
+        <div class="column is-6">
+          <h2 class="title is-3 section-title-left">Motivation — LLMs: Good but Not Enough</h2>
+          <div class="content">
+            <div class="motivation-point motivation-good">
+              <span class="motivation-icon">😊</span>
+              <p>LLMs have <strong>rich game design knowledge prior</strong>.</p>
+            </div>
+            <div class="placeholder-figure" id="motivation-survey-figure">
+              <p class="has-text-centered has-text-grey">[ LLM Survey Paper 截圖 — Large Language Models and Games ]</p>
+            </div>
+            <div class="motivation-point motivation-bad">
+              <span class="motivation-icon">😢</span>
+              <p>LLMs don't know how to generate <strong>legal, fun</strong> levels.</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End youtube video -->
+<!-- End Problem + Motivation -->
 
-
-<!-- Video carousel -->
-<section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <!-- TODO: Add poster image for better preview -->
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <!-- Your video file here -->
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
+<!-- How we define fun? -->
+<section class="section hero is-light" id="define-fun">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">How We Define Fun?</h2>
+        <div class="content has-text-justified">
+          <p>We propose three key dimensions to evaluate whether a generated game level is <strong>"fun"</strong>:</p>
+          <div class="fun-dimensions">
+            <div class="fun-dimension-card">
+              <div class="fun-dimension-icon">🎯</div>
+              <h4>Skill-Discriminative</h4>
+              <p>A fun level should differentiate players of different skill levels — better players should achieve better outcomes.</p>
+            </div>
+            <div class="fun-dimension-card">
+              <div class="fun-dimension-icon">🌀</div>
+              <h4>Diverse</h4>
+              <p>Generated levels should exhibit variety in structure and solution paths, avoiding repetitive patterns.</p>
+            </div>
+            <div class="fun-dimension-card">
+              <div class="fun-dimension-icon">🤝</div>
+              <h4>Interaction</h4>
+              <p>Levels should encourage meaningful object interactions, creating engaging gameplay experiences.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-<!-- End video carousel -->
+<!-- End How we define fun? -->
 
 
-
-
-
-
-<!-- Paper poster -->
-<section class="hero is-small is-light">
+<!-- Methodology Section -->
+<section class="hero is-small" id="methodology">
   <div class="hero-body">
-    <div class="container">
-      <h2 class="title">Poster</h2>
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Methodology — SFT + Multi-Reward GRPO</h2>
+      <div class="content has-text-justified">
+        <!-- Method Overview Figure -->
+        <div class="placeholder-figure method-figure" id="method-overview-figure">
+          <p class="has-text-centered has-text-grey">[ Method Overview Figure — 請放置方法架構圖 ]</p>
+        </div>
 
-      <!-- TODO: Replace with your poster PDF -->
-      <iframe  src="static/pdfs/sample.pdf" width="100%" height="550">
-          </iframe>
-        
+        <div class="method-steps">
+          <div class="method-step">
+            <div class="method-step-number">1</div>
+            <div class="method-step-content">
+              <h4>Data Bootstrapping with SFT</h4>
+              <p>We bootstrap training data by using LLMs to generate initial game levels, then filter for valid and playable ones. These are used to fine-tune the base model via Supervised Fine-Tuning (SFT).</p>
+            </div>
+          </div>
+          <div class="method-step">
+            <div class="method-step-number">2</div>
+            <div class="method-step-content">
+              <h4>Multi-Reward GRPO</h4>
+              <p>We design multiple reward signals that capture different aspects of "fun" — including regret-based skill discrimination, solution diversity, and object interaction richness — and optimize them jointly using Group Relative Policy Optimization (GRPO).</p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="title is-4 has-text-centered" style="margin-top: 2rem;">Reward Design</h3>
+        <div class="reward-cards">
+          <div class="reward-card">
+            <h5>Regret</h5>
+            <p>Measures skill-discrimination via the performance gap between agents of different capabilities.</p>
+          </div>
+          <div class="reward-card">
+            <h5>IPS-GRPO</h5>
+            <p>Importance-weighted policy optimization for stable multi-reward training.</p>
+          </div>
+          <div class="reward-card">
+            <h5>Diversity Weight</h5>
+            <p>Encourages variation in generated level structures and solution paths.</p>
+          </div>
+          <div class="reward-card">
+            <h5>Interaction Weight</h5>
+            <p>Rewards levels with rich object interaction opportunities.</p>
+          </div>
+        </div>
       </div>
     </div>
-  </section>
-<!--End paper poster -->
+  </div>
+</section>
+<!-- End Methodology -->
+
+
+
+
+<!-- Result Section -->
+<section class="hero is-small is-light" id="results">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Results</h2>
+      <div class="content">
+        <!-- Main Comparison Table -->
+        <h3 class="title is-4">Main Comparison</h3>
+        <div class="table-container">
+          <table class="table is-bordered is-striped is-hoverable is-fullwidth result-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>Vanilla LLM</th>
+                <th>SFT LLM</th>
+                <th>GRPO LLM (Ours)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Parse Rate ↑</td>
+                <td>—</td>
+                <td>—</td>
+                <td><strong>—</strong></td>
+              </tr>
+              <tr>
+                <td>Playable Rate ↑</td>
+                <td>—</td>
+                <td>—</td>
+                <td><strong>—</strong></td>
+              </tr>
+              <tr>
+                <td>Regret ↑</td>
+                <td>—</td>
+                <td>—</td>
+                <td><strong>—</strong></td>
+              </tr>
+              <tr>
+                <td>Held-out Regret ↑</td>
+                <td>—</td>
+                <td>—</td>
+                <td><strong>—</strong></td>
+              </tr>
+              <tr>
+                <td>Object Interaction Times ↑</td>
+                <td>—</td>
+                <td>—</td>
+                <td><strong>—</strong></td>
+              </tr>
+              <tr>
+                <td>Held-out Obj. Interaction ↑</td>
+                <td>—</td>
+                <td>—</td>
+                <td><strong>—</strong></td>
+              </tr>
+              <tr>
+                <td>Solution Diversity ↑</td>
+                <td>—</td>
+                <td>—</td>
+                <td><strong>—</strong></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">↑ indicates higher is better. <strong>Bold</strong> denotes best result. "—" = data to be filled in.</p>
+
+        <!-- Visualization -->
+        <h3 class="title is-4" style="margin-top: 2.5rem;">Visualization</h3>
+        <div class="columns is-multiline">
+          <div class="column is-6">
+            <div class="placeholder-figure" id="result-viz-1">
+              <p class="has-text-centered has-text-grey">[ Visualization 1 — 請放置結果圖表 ]</p>
+            </div>
+          </div>
+          <div class="column is-6">
+            <div class="placeholder-figure" id="result-viz-2">
+              <p class="has-text-centered has-text-grey">[ Visualization 2 — 請放置結果圖表 ]</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Result -->
+
+
+<!-- Ablation Study Section -->
+<section class="hero is-small" id="ablation-study">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Ablation Study</h2>
+      <div class="content">
+        <p class="has-text-justified">We conduct ablation experiments to understand the contribution of each component. We examine: (1) removing SFT pre-training, and (2) removing individual reward terms one at a time.</p>
+
+        <div class="table-container">
+          <table class="table is-bordered is-striped is-hoverable is-fullwidth result-table">
+            <thead>
+              <tr>
+                <th>Configuration</th>
+                <th>Regret ↑</th>
+                <th>Diversity ↑</th>
+                <th>Interaction ↑</th>
+                <th>Overall ↑</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Full Model (Ours)</strong></td>
+                <td><strong>—</strong></td>
+                <td><strong>—</strong></td>
+                <td><strong>—</strong></td>
+                <td><strong>—</strong></td>
+              </tr>
+              <tr>
+                <td>w/o SFT</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>w/o Regret Reward</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>w/o IPS-GRPO</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>w/o Diversity Weight</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+              <tr>
+                <td>w/o Interaction Weight</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+                <td>—</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="table-note">"—" = data to be filled in. <strong>Bold</strong> denotes best result.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Ablation Study -->
+
+
+
+
+
+
+<!-- Limitation / Future Work Section -->
+<section class="hero is-small is-light" id="limitation-future">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Limitation / Future Work</h2>
+      <div class="content has-text-justified">
+        <div class="columns">
+          <div class="column is-6">
+            <div class="limitation-card">
+              <h4><span class="limitation-icon">⚠️</span> Limitations</h4>
+              <ul>
+                <li>Placeholder limitation 1 — 請填寫實際限制</li>
+                <li>Placeholder limitation 2 — 請填寫實際限制</li>
+                <li>Placeholder limitation 3 — 請填寫實際限制</li>
+              </ul>
+            </div>
+          </div>
+          <div class="column is-6">
+            <div class="limitation-card future-card">
+              <h4><span class="limitation-icon">🚀</span> Future Work</h4>
+              <ul>
+                <li>Placeholder future work 1 — 請填寫未來方向</li>
+                <li>Placeholder future work 2 — 請填寫未來方向</li>
+                <li>Placeholder future work 3 — 請填寫未來方向</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--End Limitation / Future Work -->
 
 
 
