@@ -1020,6 +1020,7 @@ a:focus {
   transition: var(--transition);
   height: 100%;
   border-top: 4px solid #f59e0b;
+  text-align: left;
 }
 
 .limitation-card:hover {

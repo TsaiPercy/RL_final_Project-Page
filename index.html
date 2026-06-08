@@ -155,8 +155,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            <!-- ⚠️ TODO: 填入摘要 -->
-            Placeholder abstract text — 請替換為實際摘要內容。
+            We use Group Relative Policy Optimization (GRPO) to train a large language model (LLM) for MiniGrid level generation with a fun-aligned reward, chosen for its stability under the sparse, episodic feedback inherent to gameplay-based evaluation. The reward encourages skill-discriminative challenges, meaningful object interactions, and diverse level layouts, producing levels that are not only playable but also fun and behaviorally rich.
           </p>
         </div>
       </div>
@@ -268,23 +267,42 @@
           </div>
         </div>
 
-        <h3 class="title is-4 has-text-centered" style="margin-top: 2rem;">Reward Design</h3>
-        <div class="reward-cards">
-          <div class="reward-card">
-            <h5>Regret</h5>
-            <p>Measures skill-discrimination via the performance gap between agents of different capabilities.</p>
+        <h3 class="title is-4 has-text-centered" style="margin-top: 2rem;">Fun-aligned Reward Design</h3>
+        <div class="columns is-multiline is-centered" style="margin-top: 1.5rem;">
+          <!-- Format -->
+          <div class="column is-4">
+            <div class="reward-card" style="height: 100%;">
+              <h5>Format</h5>
+              <p>LLM output is parseable as a valid MiniGrid environment.</p>
+            </div>
           </div>
-          <div class="reward-card">
-            <h5>IPS-GRPO</h5>
-            <p>Importance-weighted policy optimization for stable multi-reward training.</p>
+          <!-- Solvability -->
+          <div class="column is-4">
+            <div class="reward-card" style="height: 100%;">
+              <h5>Solvability</h5>
+              <p>Generated level is confirmed solvable by BFS.</p>
+            </div>
           </div>
-          <div class="reward-card">
-            <h5>Diversity Weight</h5>
-            <p>Encourages variation in generated level structures and solution paths.</p>
+          <!-- Regret -->
+          <div class="column is-4">
+            <div class="reward-card" style="height: 100%;">
+              <h5>Regret</h5>
+              <p>Performance gap between a strong and a weak agent; rewards skill-discriminative levels.</p>
+            </div>
           </div>
-          <div class="reward-card">
-            <h5>Interaction Weight</h5>
-            <p>Rewards levels with rich object interaction opportunities.</p>
+          <!-- Interaction -->
+          <div class="column is-6">
+            <div class="reward-card" style="height: 100%;">
+              <h5>Interaction</h5>
+              <p>Number of object interactions the agent performs in an episode.</p>
+            </div>
+          </div>
+          <!-- Diversity -->
+          <div class="column is-6">
+            <div class="reward-card" style="height: 100%;">
+              <h5>Diversity</h5>
+              <p>Mean pairwise Hamming distance across a group of generated levels.</p>
+            </div>
           </div>
         </div>
       </div>
@@ -308,41 +326,37 @@
           <table class="table is-bordered is-striped is-hoverable is-fullwidth result-table">
             <thead>
               <tr>
-                <th>Metric</th>
-                <th>Vanilla LLM</th>
-                <th>SFT LLM</th>
-                <th>GRPO LLM (Ours)</th>
+                <th>Method</th>
+                <th>Format Correctness ↑</th>
+                <th>Solvability ↑</th>
+                <th>Held-out Regret ↑</th>
+                <th>Held-out Interactions ↑</th>
+                <th>Diversity (path-Jaccard) ↑</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Format Correctness ↑</td>
+                <td><strong>Vanilla LLM</strong></td>
                 <td>1.8%</td>
-                <td>94.4%</td>
-                <td><strong>95.0%</strong></td>
-              </tr>
-              <tr>
-                <td>Solvability ↑</td>
                 <td>1.8%</td>
-                <td>78.2%</td>
-                <td><strong>79.4%</strong></td>
-              </tr>
-              <tr>
-                <td>Held-out Regret ↑</td>
                 <td>0.004</td>
-                <td>0.101</td>
-                <td><strong>0.173</strong></td>
-              </tr>
-              <tr>
-                <td>Held-out Interactions ↑</td>
                 <td>0.004</td>
-                <td>0.232</td>
-                <td><strong>0.864</strong></td>
-              </tr>
-              <tr>
-                <td>Diversity (path-Jaccard) ↑</td>
                 <td>0.010</td>
+              </tr>
+              <tr>
+                <td><strong>SFT LLM</strong></td>
+                <td>94.4%</td>
+                <td>78.2%</td>
+                <td>0.101</td>
+                <td>0.232</td>
                 <td>0.287</td>
+              </tr>
+              <tr>
+                <td><strong>GRPO LLM (Ours)</strong></td>
+                <td><strong>95.0%</strong></td>
+                <td><strong>79.4%</strong></td>
+                <td><strong>0.173</strong></td>
+                <td><strong>0.864</strong></td>
                 <td><strong>0.324</strong></td>
               </tr>
             </tbody>
@@ -499,7 +513,11 @@
       <div class="content has-text-justified">
         <!-- Conclusion summary -->
         <div class="conclusion-summary">
-          <p><!-- ⚠️ TODO: 填入結論總結 -->Placeholder conclusion — 請替換為實際結論。</p>
+          <ul>
+            <li><strong>Framework Proposal:</strong> We propose a two-stage Supervised Fine-Tuning (SFT) + Group Relative Policy Optimization (GRPO) framework that trains a large language model (LLM) to generate fun game levels, leveraging the complementary strengths of imitation learning and reward-driven optimization.</li>
+            <li><strong>Decomposing "Fun":</strong> We decompose "fun" into three complementary proxy rewards — skill discrimination (regret), interaction richness, and layout diversity — each grounded in actual agent gameplay and structural analysis, providing a principled and measurable approximation of an otherwise subjective concept.</li>
+            <li><strong>Experimental Validation:</strong> Our model substantially outperforms baselines on all gameplay-oriented metrics, and ablation studies confirm that each reward captures a distinct, non-redundant aspect of fun, validating the design of our multi-reward objective.</li>
+          </ul>
         </div>
 
         <div class="columns" style="margin-top: 2rem;">
@@ -507,9 +525,9 @@
             <div class="limitation-card">
               <h4><span class="limitation-icon">⚠️</span> Limitations</h4>
               <ul>
-                <li><!-- ⚠️ TODO -->請填寫限制 1</li>
-                <li><!-- ⚠️ TODO -->請填寫限制 2</li>
-                <li><!-- ⚠️ TODO -->請填寫限制 3</li>
+                <li>No human evaluation was conducted; proxy rewards may not fully capture human-perceived fun.</li>
+                <li>Experiments are limited to MiniGrid and may not generalize to more complex game environments.</li>
+                <li>Regret reward quality depends on pre-trained agents, which may bias generation toward certain level styles.</li>
               </ul>
             </div>
           </div>
@@ -517,9 +535,9 @@
             <div class="limitation-card future-card">
               <h4><span class="limitation-icon">🚀</span> Future Work</h4>
               <ul>
-                <li><!-- ⚠️ TODO -->請填寫未來方向 1</li>
-                <li><!-- ⚠️ TODO -->請填寫未來方向 2</li>
-                <li><!-- ⚠️ TODO -->請填寫未來方向 3</li>
+                <li>Incorporate human playtesting or preference feedback to better align with human notions of fun.</li>
+                <li>Extend the framework to more complex environments such as MiniHack or NetHack.</li>
+                <li>Explore curriculum-based reward shaping for controllable difficulty generation across skill levels.</li>
               </ul>
             </div>
           </div>
@@ -531,23 +549,7 @@
 <!--End Conclusion -->
 
 
-<!-- Reference Section -->
-<section class="section" id="reference">
-  <div class="container is-max-desktop">
-    <h2 class="title is-3 has-text-centered">References</h2>
-    <div class="content">
-      <ol class="reference-list">
-        <li>
-          Author 1, Author 2. <a href="#" target="_blank"><strong>"Paper Title 1"</strong></a>. In <em>Conference Name</em>, 2026.
-        </li>
-        <li>
-          Author 3, Author 4. <a href="#" target="_blank"><strong>"Paper Title 2"</strong></a>. In <em>Conference Name</em>, 2025.
-        </li>
-      </ol>
-    </div>
-  </div>
-</section>
-<!-- End Reference Section -->
+
 
 
   <footer class="footer">

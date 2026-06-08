@@ -13,9 +13,7 @@
 
 ```
 Project-Page-Template/
-├── index.html              # 主頁面（方案 A：網格地圖展示）
-├── index_B.html            # 主頁面變體（方案 B：輪播地圖展示）
-├── index_C.html            # 主頁面變體（方案 C：分頁地圖展示）
+├── index.html              # 主頁面
 ├── AIREADME.md             # 本文件
 ├── README.md               # 人類開發者說明
 ├── .nojekyll               # GitHub Pages 設定
@@ -64,9 +62,20 @@ Project-Page-Template/
 - `.problem-list` / `.motivation-point` — Problem & Motivation 佈局
 - `.fun-dimension-card` — How We Define Fun 三張卡片
 - `.method-step` / `.method-step-number` — Methodology 步驟 UI
-- `.reward-card` — Reward Design 四張卡片
+- `.reward-card` — Reward Design 五張卡片（改用 Bulma columns 排版）
 - `.result-table` — 表格樣式覆寫
 - `.limitation-card` — Limitation/Future Work 卡片
 - `.reference-list` — 參考文獻列表樣式
 
 所有自訂樣式均有 mobile responsive 支援（`@media max-width: 768px`）。
+
+## 更新記錄
+
+- **2026-06-08**:
+  - 填寫限制 (Limitations) 與未來工作 (Future Work) 卡片，分別填入 3 點正式的學術論述項目（包含無真人評估、受限於 MiniGrid 環境、Regret 依賴 Agent、結合真人玩測、擴充至 MiniHack/NetHack 與課程學習獎勵塑造）。
+  - 填寫論文摘要 (Abstract)，替換原有的 Placeholder 內容。
+  - 修復限制與未來工作卡片內因為兩端對齊（justify）產生的排版空格問題，在 CSS 的 `.limitation-card` 類別中強制套用 `text-align: left;`。
+  - 填寫結論區塊 (Conclusion)，使用條列式列表列出論文的三大主要發現（架構提案、拆解「好玩」指標、實驗驗證）。
+  - 調整主比較表格的資料列順序，使用遞進順序（`Vanilla LLM` -> `SFT LLM` -> `GRPO LLM (Ours)`）來呈現效能的逐步提升。
+  - 將 `index.html` 中的「主比較表格 (Main Comparison)」進行轉置，將各生成方法 (Method) 調整為左側首欄，指標 (Metrics) 調整為上方首列，優化寬螢幕與行動裝置上的可讀性。
+  - 清理 `AIREADME.md` 目錄結構中已刪除的 `index_B.html` 與 `index_C.html` 參照。
