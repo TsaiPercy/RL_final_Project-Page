@@ -41,18 +41,18 @@ Project-Page-Template/
 | 順序 | Section ID | 標題 | 背景色 | 說明 |
 |------|-----------|------|--------|------|
 | 1 | hero | 標題 + 作者 + 連結按鈕 | 白 | 保留原始模板 |
-| 2 | abstract | Abstract | 淺灰 `is-light` | 論文摘要 |
-| 3 | problem-motivation | Problem + Motivation | 白 | 雙欄 `columns`（採 `is-max-widescreen` 寬版容器，左 Problem 右 Motivation） |
-| 4 | methodology | Methodology | 淺灰 `is-light` | 子段落：How We Define Fun?（三卡片）+ SFT + Multi-Reward GRPO（method figure + 步驟 + reward cards） |
-| 5 | results | Results | 白 | 主比較表格（7 metrics × 3 baselines）+ visualization + generated level samples comparison 畫廊 |
-| 6 | ablation-study | Ablation Study | 淺灰 `is-light` → 白 | 消融表格（6 configs × 4 metrics） |
-| 7 | conclusion | Conclusion | 淺灰 `is-light` | 結論總結 + 雙欄卡片（Limitations + Future Work） |
-| 8 | reference | References | 白 | 參考文獻列表 |
+| 2 | teaser | Teaser | 白 | 雙欄展示 `final_strong.gif` 與 `final_strong2.gif` |
+| 3 | abstract | Abstract | 淺灰 `is-light` | 論文摘要 |
+| 4 | problem-motivation | Problem + Motivation | 白 | 雙欄 `columns`（採 `is-max-widescreen` 寬版容器，左 Problem 右 Motivation） |
+| 5 | methodology | Methodology | 淺灰 `is-light` | 子段落：How We Define Fun?（三卡片）+ SFT + Multi-Reward GRPO（method figure + 步驟 + reward cards） |
+| 6 | results | Results | 白 | 主比較表格（5 metrics × 3 baselines）+ 縱向自適應視覺化圖表 + generated level samples comparison 畫廊 |
+| 7 | ablation-study | Ablation Study | 淺灰 `is-light` → 白 | 消融表格（4 configs × 5 metrics，填入真實數據） |
+| 8 | conclusion | Conclusion | 淺灰 `is-light` | 結論總結 + 雙欄卡片（Limitations + Future Work） |
+| 9 | reference | References | 白 | 參考文獻列表 |
 
 ## 設計假設與技術債
 
 - **Placeholder 圖片**: 大多數 `.placeholder-figure` 區塊已替換為實際圖片（包括 problem、motivation 及 results 視覺化圖表），僅剩 methodology 中個別預留位置。
-- **表格數據**: Result 和 Ablation Study 表格中的 `—` 需替換為實際實驗數據
 - **Limitation 內容**: 限制和未來方向的條目需替換為實際內容
 - **Meta 資訊**: `<head>` 中的 TODO 項目（OG tags、Twitter cards 等）仍使用模板預設值
 

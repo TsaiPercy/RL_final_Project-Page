@@ -109,6 +109,33 @@
   </div>
 </section>
 
+<!-- Teaser Section -->
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <div class="columns is-centered">
+        <!-- GIF 1 -->
+        <div class="column is-6 has-text-centered">
+          <img src="static/gif/final/final_strong.gif" alt="Agent Gameplay Demo 1" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: 90%;">
+          <p class="subtitle is-6 mt-2" style="color: var(--text-secondary);">Gameplay Demo A</p>
+        </div>
+        <!-- GIF 2 -->
+        <div class="column is-6 has-text-centered">
+          <img src="static/gif/final/final_strong2.gif" alt="Agent Gameplay Demo 2" style="border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); max-width: 90%;">
+          <p class="subtitle is-6 mt-2" style="color: var(--text-secondary);">Gameplay Demo B</p>
+        </div>
+      </div>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 1.6;">
+        Gameplay demonstration of a trained <strong>Strong Agent</strong> playing on our generated levels. 
+      </h2>
+      <h2 class="subtitle has-text-centered" style="margin-top: 1.5rem; font-size: 1.1rem; line-height: 1.6;">
+        The agent demonstrates the capability to interact with game objects, and navigate to the goal efficiently.
+      </h2>
+    </div>
+  </div>
+</section>
+<!-- End Teaser -->
+
 
 <!-- Abstract -->
 <section class="section hero is-light" id="abstract">
@@ -201,12 +228,17 @@
           </div>
         </div>
 
+        <!-- 新增 Agent Pipeline 流程圖 -->
+        <div class="placeholder-figure plain-figure" id="agent-pipeline-figure" style="text-align: center; margin-top: 2rem;">
+          <img src="static/images/agent_pipeline.png" alt="Agent Gameplay Feedback Pipeline" style="max-width: 85%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+        </div>
+
         <!-- SFT + Multi-Reward GRPO -->
         <h3 class="title is-4 has-text-centered" style="margin-top: 3rem;">SFT + Multi-Reward GRPO</h3>
 
-        <!-- ⚠️ TODO: 放置方法架構圖 -->
-        <div class="placeholder-figure method-figure" id="method-overview-figure">
-          <p class="has-text-centered has-text-grey">[ ⚠️ TODO: Method Overview Figure ]</p>
+        <!-- 放置方法架構圖 -->
+        <div class="placeholder-figure plain-figure method-figure" id="method-overview-figure" style="text-align: center;">
+          <img src="static/images/Study_method.png" alt="Study Method Overview" style="max-width: 85%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
         </div>
 
         <div class="method-steps">
@@ -274,46 +306,34 @@
             </thead>
             <tbody>
               <tr>
-                <td>Parse Rate ↑</td>
-                <td>—</td>
-                <td>—</td>
-                <td><strong>—</strong></td>
+                <td>Format Correctness ↑</td>
+                <td>1.8%</td>
+                <td>94.4%</td>
+                <td><strong>95.0%</strong></td>
               </tr>
               <tr>
-                <td>Playable Rate ↑</td>
-                <td>—</td>
-                <td>—</td>
-                <td><strong>—</strong></td>
-              </tr>
-              <tr>
-                <td>Regret ↑</td>
-                <td>—</td>
-                <td>—</td>
-                <td><strong>—</strong></td>
+                <td>Solvability ↑</td>
+                <td>1.8%</td>
+                <td>78.2%</td>
+                <td><strong>79.4%</strong></td>
               </tr>
               <tr>
                 <td>Held-out Regret ↑</td>
-                <td>—</td>
-                <td>—</td>
-                <td><strong>—</strong></td>
+                <td>0.004</td>
+                <td>0.101</td>
+                <td><strong>0.173</strong></td>
               </tr>
               <tr>
-                <td>Object Interaction Times ↑</td>
-                <td>—</td>
-                <td>—</td>
-                <td><strong>—</strong></td>
+                <td>Held-out Interactions ↑</td>
+                <td>0.004</td>
+                <td>0.232</td>
+                <td><strong>0.864</strong></td>
               </tr>
               <tr>
-                <td>Held-out Obj. Interaction ↑</td>
-                <td>—</td>
-                <td>—</td>
-                <td><strong>—</strong></td>
-              </tr>
-              <tr>
-                <td>Solution Diversity ↑</td>
-                <td>—</td>
-                <td>—</td>
-                <td><strong>—</strong></td>
+                <td>Diversity (path-Jaccard) ↑</td>
+                <td>0.010</td>
+                <td>0.287</td>
+                <td><strong>0.324</strong></td>
               </tr>
             </tbody>
           </table>
@@ -321,18 +341,22 @@
         <p class="table-note">↑ indicates higher is better. <strong>Bold</strong> denotes best result. "—" = data to be filled in.</p>
 
         <!-- Visualization -->
-        <h3 class="title is-4" style="margin-top: 2.5rem;">Visualization</h3>
-        <div class="columns is-multiline">
-          <div class="column is-6">
-            <!-- 放置結果圖表 1: Regret Level Graph -->
+        <h3 class="title is-4" style="margin-top: 2.5rem; text-align: center;">Visualization</h3>
+        
+        <div class="columns is-multiline is-centered">
+          <!-- Regret Level Graph (標準比例，置中展示) -->
+          <div class="column is-8 has-text-centered" style="margin-bottom: 2rem;">
+            <p class="subtitle is-6" style="margin-bottom: 0.5rem; color: var(--text-secondary);">Regret Trend during Training</p>
             <div class="placeholder-figure plain-figure" id="result-viz-1" style="text-align: center;">
-              <img src="static/images/result_regret_level_graph.png" alt="Regret Level Graph" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              <img src="static/images/result/result_regret_level_graph.png" alt="Regret Level Graph" style="max-width: 80%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
             </div>
           </div>
-          <div class="column is-6">
-            <!-- 放置結果圖表 2: Matrices Level Graph -->
+
+          <!-- Held-out Generalization (極寬比例，滿版展示) -->
+          <div class="column is-12 has-text-centered">
+            <p class="subtitle is-6" style="margin-bottom: 0.5rem; color: var(--text-secondary);">Held-out Generalization Performance</p>
             <div class="placeholder-figure plain-figure" id="result-viz-2" style="text-align: center;">
-              <img src="static/images/result_matrices_level_graph.png" alt="Matrices Level Graph" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              <img src="static/images/result/result_held_out.png" alt="Held-out Performance" style="max-width: 100%; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
             </div>
           </div>
         </div>
@@ -402,54 +426,45 @@
             <thead>
               <tr>
                 <th>Configuration</th>
-                <th>Regret ↑</th>
-                <th>Diversity ↑</th>
-                <th>Interaction ↑</th>
-                <th>Overall ↑</th>
+                <th>Format Correctness ↑</th>
+                <th>Solvability ↑</th>
+                <th>Held-out Regret ↑</th>
+                <th>Held-out Interactions ↑</th>
+                <th>Diversity (path-Jaccard) ↑</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>Full Model (Ours)</strong></td>
-                <td><strong>—</strong></td>
-                <td><strong>—</strong></td>
-                <td><strong>—</strong></td>
-                <td><strong>—</strong></td>
+                <td><strong>Ours</strong></td>
+                <td>95.0%</td>
+                <td>79.4%</td>
+                <td><strong>0.173</strong></td>
+                <td>0.864</td>
+                <td>0.324</td>
               </tr>
               <tr>
-                <td>w/o SFT</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
+                <td>w/o regret reward</td>
+                <td>96.6%</td>
+                <td><strong>88.2%</strong></td>
+                <td>0.152</td>
+                <td><strong>1.106</strong></td>
+                <td>0.291</td>
               </tr>
               <tr>
-                <td>w/o Regret Reward</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
+                <td>w/o interaction reward</td>
+                <td><strong>97.6%</strong></td>
+                <td>81.2%</td>
+                <td>0.152</td>
+                <td>0.252</td>
+                <td><strong>0.360</strong></td>
               </tr>
               <tr>
-                <td>w/o IPS-GRPO</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td>w/o Diversity Weight</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-              </tr>
-              <tr>
-                <td>w/o Interaction Weight</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
-                <td>—</td>
+                <td>w/o diversity reward</td>
+                <td>95.4%</td>
+                <td>87.8%</td>
+                <td>0.156</td>
+                <td>1.024</td>
+                <td>0.309</td>
               </tr>
             </tbody>
           </table>

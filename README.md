@@ -27,16 +27,12 @@ To start using the template click on `Use this Template`.
 The template uses html for controlling the content and css for controlling the style. 
 To edit the websites contents edit the `index.html` file. It contains different HTML "building blocks", use whichever ones you need and comment out the rest.  
 
-### Alternative Versions
-
-- `index.html`: Implements **Option A (Image Grid Comparison)** where all 9 generated level maps (3 models × 3 samples) are shown in a static grid.
-- `index_B.html`: Implements **Option B (Carousel Slider Comparison)** where maps are grouped by sample in an auto-playing slider.
-- `index_C.html`: Implements **Option C (Comparison Tabs)** where maps are categorized by model (GRPO, SFT, Vanilla) and can be toggled via Bulma tab controls.
 
 **IMPORTANT!** Make sure to replace the `favicon.ico` under `static/images/` with one of your own, otherwise your favicon is going to be a dreambooth image of me.
 
 ## What's New
 
+- Actual experimental results populated in both results and ablation study tables
 - Modern, clean design with better mobile support
 - Improved SEO with proper meta tags and structured data
 - Performance improvements (lazy loading, optimized assets)
@@ -46,10 +42,11 @@ To edit the websites contents edit the `index.html` file. It contains different 
 
 ## Page Sections
 
+- Teaser (two-column layout with gameplay GIFs)
 - Abstract
 - Problem + Motivation (two-column layout, widescreen container)
 - Methodology (How We Define Fun? + SFT + Multi-Reward GRPO)
-- Results (comparison table + visualization graphs + generated level samples comparison grid)
+- Results (comparison table + stacked visualization graphs + generated level samples comparison grid)
 - Ablation Study (ablation table)
 - Conclusion (summary + Limitations + Future Work cards)
 - References
