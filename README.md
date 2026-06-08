@@ -34,7 +34,6 @@ To edit the websites contents edit the `index.html` file. It contains different 
 
 - Populated the Limitations and Future Work sections with 3 detailed academic items each (covering human playtesting, complex environments, and agent biases)
 - Populated the Abstract section with the actual paper abstract text
-- Fixed word spacing layout issue in Limitation/Future Work cards by adding left text alignment to `.limitation-card` CSS class
 - Populated the Conclusion section with the 3 main findings (Framework Proposal, Decomposing "Fun", and Experimental Validation) in a clear list format
 - Transposed the main comparison table in Results section (methods in rows using progressive order: Vanilla -> SFT -> GRPO, metrics in columns) for better readability on desktop and mobile screens
 - Refactored Reward Design into a 5-card Fun-aligned Reward Design section in the Methodology section, and updated SFT Data Bootstrapping / Multi-Reward GRPO stages description
